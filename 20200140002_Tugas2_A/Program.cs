@@ -17,8 +17,11 @@ namespace _20200140002_Tugas2_A
                 con = new SqlConnection("data source=LAPTOP-N3UNMQ7P;database=Puput;Integrated Security = TRUE");
                 con.Open();
 
-                SqlCommand cm = new SqlCommand("create table Pemilik (NIK_Pemilik char(7) not null primary key, Nama_Pemilik varchar(50) not null, No_Hp char(12), Alamat varchar(50))", con);
+                SqlCommand cm = new SqlCommand("create table Pemilik (NIK_Pemilik char(7) not null primary key, Nama_Pemilik varchar(50) not null, No_Hp char(12), Alamat varchar(50))"
+                    + "create table Penyewa (NIK_Penyewa char(7) not null primary key, Nama_Penyewa varchar(50) not null, No_Hp char(12), Alamat varchar(50))", con);
                 cm.ExecuteNonQuery();
+
+
 
             }
             
