@@ -9,6 +9,10 @@ namespace _20200140002_Tugas2_A
 {
     class Program
     {
+        public SqlConnection sqlconn;
+        public SqlDataReader dataread;
+        public SqlCommand cmd;
+
         public void CreateTable()
         {
             SqlConnection con = null;
@@ -74,9 +78,25 @@ namespace _20200140002_Tugas2_A
                 con?.Close();
             }
         }
+
+        public void TampilData()
+        {
+            SqlConnection con = null;
+            try
+            {
+                con = new SqlConnection("data source=LAPTOP-N3UNMQ7P;database=Puput;Integrated Security = TRUE");
+                con.Open();
+                sqlconn.Open();
+                cmd = new SqlCommand("Select * FROM Pemilik"
+                    + "Select * FROM Penyewa"
+                    + "Select * FROM Transaksi", con);
+                dataread = cmd.ExecuteReader();
+                
+            }
         static void Main(string[] args)
         {
             new Program().CreateTable();
+            new Program().InsertData();
 
         }
     }
