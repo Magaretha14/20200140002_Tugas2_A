@@ -23,11 +23,20 @@ namespace _20200140002_Tugas2_A
 
                 Console.WriteLine("Tabel sukses dibuat!");
                 Console.ReadKey();
+            }catch (Exception e)
+            {
+                Console.WriteLine("Sepertinya Tabelmu gagal :("+e);
+                Console.ReadKey();
             }
-            
+            finally
+            {
+                con.Close();
+            }
+
         }
         static void Main(string[] args)
         {
+            new Program().CreateTable();
         }
     }
 }
