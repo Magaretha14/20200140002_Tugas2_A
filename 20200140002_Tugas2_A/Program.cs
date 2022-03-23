@@ -35,9 +35,19 @@ namespace _20200140002_Tugas2_A
             }
 
         }
+
+        public void InsertData()
+        {
+            SqlConnection con = null;
+            try
+            {
+                con = new SqlConnection("data source=LAPTOP-N3UNMQ7P;database=Puput;Integrated Security = TRUE");
+                con.Open();
+            }
         static void Main(string[] args)
         {
             new Program().CreateTable();
+
         }
     }
 }
