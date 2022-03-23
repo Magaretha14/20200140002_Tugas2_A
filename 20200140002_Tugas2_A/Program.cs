@@ -21,8 +21,8 @@ namespace _20200140002_Tugas2_A
                     + "create table Penyewa (NIK_Penyewa char(7) not null primary key, Nama_Penyewa varchar(50) not null, No_Hp char(12), Alamat varchar(50))", con);
                 cm.ExecuteNonQuery();
 
-
-
+                Console.WriteLine("Tabel sukses dibuat!");
+                Console.ReadKey();
             }
             
         }
