@@ -53,7 +53,12 @@ namespace _20200140002_Tugas2_A
                     + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265932','Valen','082255065822','Bogor')"
                     + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265933','Didu','082255065823','Medan')"
                     + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265934','Didan','082255065824','Batam')"
-                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265935','Puput','082255065825','Kalteng')", con);
+                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265935','Puput','082255065825','Kalteng')"
+                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20541','6285781','6265931','04 April 2022','6 Bulan','Toko 1 Blok A','Rp 12.000.000,00')"
+                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20542','6285782','6265932','05 Maret 2022','1 Tahun','Toko 2 Blok B',' Rp 60.000.000,00 ')"
+                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20543','6285783','6265933','06 Mei 2022','9 Bulan','Toko 3 Blok C','Rp 45.000.000,00 ')"
+                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20544','6285784','6265934','14 Juni 2022','3 Tahun','Toko 4 Blok D','Rp 180.000.000,00 ')"
+                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20545','6285785','6265935','07 Juli 2022','7 Bulan','Toko 5 Blok E',' Rp 35.000.000,00 ')", con);
             }
         static void Main(string[] args)
         {
