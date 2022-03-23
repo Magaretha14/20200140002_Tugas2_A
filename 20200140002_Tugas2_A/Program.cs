@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace _20200140002_Tugas2_A
@@ -10,7 +11,6 @@ namespace _20200140002_Tugas2_A
     class Program
     {
         public SqlDataReader dataread;
-        public SqlCommand cmd;
 
         public void CreateTable()
         {
@@ -74,41 +74,14 @@ namespace _20200140002_Tugas2_A
             }
             finally
             {
-                con?.Close();
-            }
-        }
-
-        public void TampilData()
-        {
-            SqlConnection con = null;
-            try
-            {
-                con = new SqlConnection("data source=LAPTOP-N3UNMQ7P;database=Puput;Integrated Security = TRUE");
-                con.Open();
-               
-                cmd = new SqlCommand("Select * FROM Pemilik"
-                    + "Select * FROM Penyewa"
-                    + "Select * FROM Transaksi", con);
-                dataread = cmd.ExecuteReader();
-
-                Console.WriteLine("Data sukses ditampilkan!");
-                Console.ReadKey();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Sepertinya ada data yang gagal ditampilkan :(" + e);
-                Console.ReadKey();
-            }
-            finally
-            {
                 con.Close();
             }
         }
+
         static void Main(string[] args)
         {
             new Program().CreateTable();
             new Program().InsertData();
-            new Program().TampilData();
 
         }
     }
