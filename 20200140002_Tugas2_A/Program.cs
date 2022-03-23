@@ -91,12 +91,25 @@ namespace _20200140002_Tugas2_A
                     + "Select * FROM Penyewa"
                     + "Select * FROM Transaksi", con);
                 dataread = cmd.ExecuteReader();
-                
+
+                Console.WriteLine("Data sukses ditampilkan!");
+                Console.ReadKey();
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Sepertinya ada data yang gagal ditampilkan :(" + e);
+                Console.ReadKey();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         static void Main(string[] args)
         {
             new Program().CreateTable();
             new Program().InsertData();
+            new Program().TampilData();
 
         }
     }
