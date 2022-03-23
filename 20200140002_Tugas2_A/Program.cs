@@ -43,6 +43,12 @@ namespace _20200140002_Tugas2_A
             {
                 con = new SqlConnection("data source=LAPTOP-N3UNMQ7P;database=Puput;Integrated Security = TRUE");
                 con.Open();
+
+                SqlCommand cm = new SqlCommand("insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285781','Suharti','082255068191','Jakarta')"
+                    + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285782','Sukamto','082255068192','Bekasi')"
+                    + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285783','Sujandono','082255068193','Yogyakarta')"
+                    + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285784','Maria','082255068194','Kalimantan')"
+                    + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285785','Birbida','082255068195','Tangerang')", con);
             }
         static void Main(string[] args)
         {
