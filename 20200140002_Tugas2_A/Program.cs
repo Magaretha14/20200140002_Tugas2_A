@@ -48,7 +48,12 @@ namespace _20200140002_Tugas2_A
                     + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285782','Sukamto','082255068192','Bekasi')"
                     + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285783','Sujandono','082255068193','Yogyakarta')"
                     + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285784','Maria','082255068194','Kalimantan')"
-                    + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285785','Birbida','082255068195','Tangerang')", con);
+                    + "insert into Pemilik (NIK_Pemilik, Nama_Pemilik, No_Hp, Alamat) values ('6285785','Birbida','082255068195','Tangerang')"
+                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265931','Reyna','082255065821','Tangsel')"
+                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265932','Valen','082255065822','Bogor')"
+                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265933','Didu','082255065823','Medan')"
+                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265934','Didan','082255065824','Batam')"
+                    + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265935','Puput','082255065825','Kalteng')", con);
             }
         static void Main(string[] args)
         {
