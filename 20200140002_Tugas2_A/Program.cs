@@ -59,7 +59,21 @@ namespace _20200140002_Tugas2_A
                     + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20543','6285783','6265933','06 Mei 2022','9 Bulan','Toko 3 Blok C','Rp 45.000.000,00 ')"
                     + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20544','6285784','6265934','14 Juni 2022','3 Tahun','Toko 4 Blok D','Rp 180.000.000,00 ')"
                     + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20545','6285785','6265935','07 Juli 2022','7 Bulan','Toko 5 Blok E',' Rp 35.000.000,00 ')", con);
+                cm.ExecuteNonQuery();
+
+                Console.WriteLine("Sukses menambahkan data");
+                Console.ReadKey();
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Gagal menambahkan data" + e);
+                Console.ReadKey();
+            }
+            finally
+            {
+                con?.Close();
+            }
+        }
         static void Main(string[] args)
         {
             new Program().CreateTable();
