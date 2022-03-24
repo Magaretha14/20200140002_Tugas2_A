@@ -58,11 +58,16 @@ namespace _20200140002_Tugas2_A
                     + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265933','Didu','082255065823','Medan')"
                     + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265934','Didan','082255065824','Batam')"
                     + "insert into Penyewa (NIK_Penyewa, Nama_Penyewa, No_Hp, Alamat) values ('6265935','Puput','082255065825','Kalteng')"
-                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20541','6285781','6265931','04 April 2022','6 Bulan','Toko 1 Blok A','Rp 12.000.000,00')"
-                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20542','6285782','6265932','05 Maret 2022','1 Tahun','Toko 2 Blok B',' Rp 60.000.000,00 ')"
-                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20543','6285783','6265933','06 Mei 2022','9 Bulan','Toko 3 Blok C','Rp 45.000.000,00 ')"
-                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20544','6285784','6265934','14 Juni 2022','3 Tahun','Toko 4 Blok D','Rp 180.000.000,00 ')"
-                    + "insert into Transaksi (Id_Transaksi, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20545','6285785','6265935','07 Juli 2022','7 Bulan','Toko 5 Blok E',' Rp 35.000.000,00 ')", con);
+                    + "insert into Toko (Id_Toko, Nama_Toko, Alamat) values ('T1BA','Toko Sari','Toko 1 Blok A')"
+                    + "insert into Toko (Id_Toko, Nama_Toko, Alamat) values ('T2BB','Toko Pini','Toko 2 Blok B')"
+                    + "insert into Toko (Id_Toko, Nama_Toko, Alamat) values ('T3BC','Toko Kili','Toko 3 Blok C')"
+                    + "insert into Toko (Id_Toko, Nama_Toko, Alamat) values ('T4BD','Toko Lako','Toko 4 Blok D')"
+                    + "insert into Toko (Id_Toko, Nama_Toko, Alamat) values ('T5BE','Toko Labo','Toko 5 Blok E')"
+                    + "insert into Transaksi (Id_Transaksi, Id_Toko, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20541','T1BA','6285781','6265931','04 April 2022','6 Bulan','Toko 1 Blok A','Rp 12.000.000,00')"
+                    + "insert into Transaksi (Id_Transaksi, Id_Toko, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20542','T2BB','6285782','6265932','05 Maret 2022','1 Tahun','Toko 2 Blok B',' Rp 60.000.000,00 ')"
+                    + "insert into Transaksi (Id_Transaksi, Id_Toko, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20543','T3BC','6285783','6265933','06 Mei 2022','9 Bulan','Toko 3 Blok C','Rp 45.000.000,00 ')"
+                    + "insert into Transaksi (Id_Transaksi, Id_Toko, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20544','T4BD','6285784','6265934','14 Juni 2022','3 Tahun','Toko 4 Blok D','Rp 180.000.000,00 ')"
+                    + "insert into Transaksi (Id_Transaksi, Id_Toko, NIK_Pemilik, NIK_Penyewa, Waktu, TempoKontrak, Alamat_Toko, Harga) values ('20545','T5BE','6285785','6265935','07 Juli 2022','7 Bulan','Toko 5 Blok E',' Rp 35.000.000,00 ')", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Sukses menambahkan data");
