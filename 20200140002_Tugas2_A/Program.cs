@@ -22,7 +22,8 @@ namespace _20200140002_Tugas2_A
 
                 SqlCommand cm = new SqlCommand("create table Pemilik (NIK_Pemilik char(7) not null primary key, Nama_Pemilik varchar(50) not null, No_Hp char(12), Alamat varchar(50))"
                     + "create table Penyewa (NIK_Penyewa char(7) not null primary key, Nama_Penyewa varchar(50) not null, No_Hp char(12), Alamat varchar(50))"
-                    + "create table Transaksi (Id_Transaksi char(5) not null primary key, NIK_Pemilik char(7) FOREIGN KEY REFERENCES Pemilik(NIK_Pemilik), NIK_Penyewa char(7) FOREIGN KEY REFERENCES Penyewa(NIK_Penyewa), Waktu varchar(20), TempoKontrak varchar(50), Alamat_Toko varchar(50), Harga varchar(50))", con);
+                    + "create table Toko (Id_Toko varchar(4) not null primary key, Nama_Toko varchar(50) not null, Alamat varchar(50))"
+                    + "create table Transaksi (Id_Transaksi char(5) not null primary key, Id_Toko varchar(4) FOREIGN KEY REFERENCES Toko(Id_Toko), NIK_Pemilik char(7) FOREIGN KEY REFERENCES Pemilik(NIK_Pemilik), NIK_Penyewa char(7) FOREIGN KEY REFERENCES Penyewa(NIK_Penyewa), Waktu varchar(20), TempoKontrak varchar(50), Alamat_Toko varchar(50), Harga varchar(50))", con);
                 cm.ExecuteNonQuery();
 
                 Console.WriteLine("Tabel sukses dibuat!");
